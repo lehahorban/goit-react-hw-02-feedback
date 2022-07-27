@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './Statistics.module.css';
+// import style from './Statistics.module.css';
 
 class Statistics extends Component {
   state = {
