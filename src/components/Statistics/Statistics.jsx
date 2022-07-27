@@ -68,7 +68,7 @@ class Statistics extends Component {
         <p>Neutral:{neutral}</p>
         <p>Bad:{bad}</p>
         <p>Total:{total}</p>
-        <p>Positive feedback:{positiveFeedback}</p>
+        <p>Positive feedback:{positiveFeedback}%</p>
       </div>
     );
   }
