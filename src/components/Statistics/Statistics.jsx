@@ -52,6 +52,7 @@ class Statistics extends Component {
     const { good, neutral, bad } = this.state;
     return (
       <div>
+        <p>Please leave feedback</p>
         <button type="button" onClick={this.goodFeedback}>
           Good
         </button>
@@ -62,13 +63,18 @@ class Statistics extends Component {
           Bad
         </button>
 
-        <p>Please leave feedback</p>
         <p>Statistics</p>
-        <p>Good:{good}</p>
-        <p>Neutral:{neutral}</p>
-        <p>Bad:{bad}</p>
-        <p>Total:{total}</p>
-        <p>Positive feedback:{positiveFeedback}%</p>
+        {total === 0 ? (
+          <p>There is no feedback</p>
+        ) : (
+          <div>
+            <p>Good:{good}</p>
+            <p>Neutral:{neutral}</p>
+            <p>Bad:{bad}</p>
+            <p>Total:{total}</p>
+            <p>Positive feedback:{positiveFeedback}%</p>
+          </div>
+        )}
       </div>
     );
   }
