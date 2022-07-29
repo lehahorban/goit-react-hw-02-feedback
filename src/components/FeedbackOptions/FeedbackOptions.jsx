@@ -1,4 +1,6 @@
 import style from './Style.module.css';
+import PropTypes from 'prop-types';
+import { shape } from 'prop-types';
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
@@ -14,17 +16,13 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
           {item}
         </button>
       ))}
-      {/* <button type="button" onClick={this.goodFeedback}>
-        Good
-      </button>
-      <button type="button" onClick={this.neutralFeedback}>
-        Neutral
-      </button>
-      <button type="button" onClick={this.badFeedback}>
-        Bad
-      </button> */}
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 
 export default FeedbackOptions;
