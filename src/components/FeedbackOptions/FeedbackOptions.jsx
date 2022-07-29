@@ -1,8 +1,16 @@
+import style from './Style.module.css';
+
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <div>
       {options.map(item => (
-        <button key={item} type="button" name={item} onClick={onLeaveFeedback}>
+        <button
+          className="style"
+          key={item}
+          type="button"
+          name={item}
+          onClick={onLeaveFeedback}
+        >
           {item}
         </button>
       ))}
