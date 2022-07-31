@@ -8,7 +8,7 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
       {options.map(item => (
         <button
           className={style.button}
-          key={shortid.generate()n}
+          key={shortid.generate()}
           type="button"
           name={item}
           onClick={onLeaveFeedback}
