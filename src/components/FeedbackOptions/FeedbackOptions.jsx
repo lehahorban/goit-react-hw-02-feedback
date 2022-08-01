@@ -11,7 +11,7 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
           key={shortid.generate()}
           type="button"
           name={item}
-          onClick={onLeaveFeedback}
+          onClick={() => onLeaveFeedback(item)}
         >
           {item}
         </button>

@@ -10,34 +10,9 @@ class App extends Component {
     bad: 0,
   };
 
-  // goodFeedback = () => {
-  //   this.setState(prevState => {
-  //     return {
-  //       good: prevState.good + 1,
-  //     };
-  //   });
-  // };
-
-  // neutralFeedback = () => {
-  //   this.setState(prevState => {
-  //     return {
-  //       neutral: prevState.neutral + 1,
-  //     };
-  //   });
-  // };
-
-  // badFeedback = () => {
-  //   this.setState(prevState => {
-  //     return {
-  //       bad: prevState.bad + 1,
-  //     };
-  //   });
-  // };
-
-  onLeaveFeedback = e => {
-    const name = e.target.name;
+  onLeaveFeedback = options => {
     this.setState(prevState => ({
-      [name]: prevState[name] + 1,
+      [options]: prevState[options] + 1,
     }));
   };
 
@@ -67,7 +42,7 @@ class App extends Component {
           <FeedbackOptions
             options={objectKeys}
             onLeaveFeedback={this.onLeaveFeedback}
-          ></FeedbackOptions>
+          />
         </Section>
 
         {total === 0 ? (
